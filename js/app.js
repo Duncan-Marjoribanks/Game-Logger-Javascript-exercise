@@ -28,5 +28,14 @@ console.log("look for me");
 
 form.addEventListener('submit', handleSubmit);
 
+const deleteButton = document.querySelector('#delete-button');
 
+const handleClick = function(event) {
+    const gamesPlayed = document.querySelector('#games-played');
+    while (gamesPlayed.firstChild) {
+      gamesPlayed.removeChild(gamesPlayed.firstChild);
+    }
+}
+
+deleteButton.addEventListener('click', handleClick);
 });
